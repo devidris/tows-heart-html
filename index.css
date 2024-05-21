@@ -24,7 +24,8 @@ body {
 /*Header styling*/
 .header-container {
   position: fixed;
-  width: 100%;
+  left: 0;
+  right: 0;
   height: 10vh;
   z-index: 2;
   display: flex;
