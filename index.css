@@ -5,8 +5,9 @@
   font-family: Poppins;
 }
 body {
-  overflow-x: hidden;
   width: 100%;
+
+  overflow-x: hidden;
   outline: none;
 }
 :root {
@@ -15,14 +16,15 @@ body {
   --footer-color: #023668;
   --sub-script: grey;
 }
+.app_container {
+  width: 100%;
+  overflow-x: hidden;
+}
 
 /*Header styling*/
 .header-container {
   position: fixed;
   width: 100%;
-
-  left: 0;
-  right: 0;
   height: 10vh;
   z-index: 2;
   display: flex;
