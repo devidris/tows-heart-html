@@ -3,10 +3,12 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs
 // Header responsiveness
 let hamburger = document.querySelector(`.hamburger`)
 let menu_container = document.querySelector(`.header-container_div__right`)
+let logo_name = document.querySelector(`.header-container_div__left`)
 console.log(hamburger)
 hamburger.addEventListener(`click`, () => {
   hamburger.classList.toggle(`active`)
   menu_container.classList.toggle(`active`)
+  logo_name.classList.toggle(`active`)
 })
 // This is a very bad practise but omo i tried to use onclick in the html file but it keeps telling me the function isnt defined
 let menu_item = document.querySelector(`.span`)
