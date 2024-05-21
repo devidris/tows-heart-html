@@ -261,4 +261,4 @@ setInterval(() => {
 let year = new Date().getFullYear()
 document.querySelector(
   `.footer-container_break-line span`
-).innerHTML = `copyright@-${year}All rights reserved`
+).innerHTML = `copyright@${year}-All rights reserved`

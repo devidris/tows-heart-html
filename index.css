@@ -282,7 +282,7 @@ body {
 }
 @media (max-width: 600px) {
   .intro-container {
-    height: 80vh;
+    height: 30rem;
   }
   .intro-container_body {
     width: 95%;
@@ -321,12 +321,12 @@ body {
 }
 @media (max-width: 360px) {
   .intro-container {
-    height: 70vh;
+    height: 30rem;
   }
 }
 @media (max-width: 320px) {
   .intro-container {
-    height: 90vh;
+    height: 30rem;
   }
 }
 
@@ -664,6 +664,12 @@ body {
   }
   .featurs-container_div__details {
     justify-content: space-between;
+  }
+  .featurs-container_div__details___left____first_____span-1,
+  .featurs-container_div__details___right____first_____span-1 {
+    color: var(--footer-color);
+    font-weight: 600;
+    font-size: 18px;
   }
 }
 @media (max-width: 320px) {
