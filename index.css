@@ -70,9 +70,15 @@ body {
 }
 .header-container_div__left span {
   background-color: transparent;
+  padding: 5px 15px;
+  border-radius: 15px;
+  transition: all .3s;
 }
 .header-container_div__right span {
   background-color: transparent;
+  padding: 5px 15px;
+  border-radius: 15px;
+  transition: all .3s;
 }
 
 .header-container_div__right span:hover {
@@ -937,6 +943,8 @@ body {
   padding: 5px 15px;
   transition: background-color 1;
   cursor: pointer;
+
+  transition: all 0.5s;
 }
 .testimonial-container_div__slider___container:hover {
   background-color: var(--font-color);
