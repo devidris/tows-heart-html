@@ -49,6 +49,14 @@ menu_item_6.addEventListener(`click`, () => {
   console.log(`red`)
 })
 
+//Intro animation
+let current_image = document.querySelector(
+  `.intro-container_body__div___middle____current`
+)
+let next_image = document.querySelector(
+  `.intro-container_body__div___middle____next`
+)
+
 //Workings array
 let working_array = [
   {
@@ -134,27 +142,27 @@ document.querySelector(
 
 let slider_cart = [
   {
-    image: "../public/second.jpeg",
+    image: "../public/developer-0.jpg",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit. ",
   },
   {
-    image: "../public/developer.jpg",
+    image: "../public/developer-1.jpg",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit.  ",
   },
   {
-    image: "../public/second.jpeg",
+    image: "../public/developer-0.jpg",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit. ",
   },
   {
-    image: "../public/developer.jpg",
+    image: "../public/developer-1.jpg",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit. ",
   },
   {
-    image: "../public/second.jpeg",
+    image: "../public/developer-0.jpg",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit.",
   },
@@ -237,7 +245,7 @@ let scroll_inner = document.querySelector(`.match-container_div__content`)
 let scroll_content = Array.from(scroll_inner.children)
 scroll_content.forEach(item => {
   let duplicated_text = item.cloneNode(true)
-  console.log(duplicated_text)
+
   scroll_inner.append(duplicated_text)
 })
 
