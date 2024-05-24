@@ -212,7 +212,7 @@ let swiper = new Swiper(".my-swiper", {
 let match = [
   {
     detail:
-      "Alice and Bob met on CoolDatingSite.com and hit it off right away with their shared love of hiking and outdoor adventures. After many shared trips and experiences, they decided to tie the knot in 2023.",
+      "Alice and Bob met on CoolDatingSite.com and hit it off right away with their shared love of hiking and outdoor adventures. After many shared trips and experiences, they decided to tie the knot in 2023. ",
   },
   {
     detail:
@@ -220,42 +220,26 @@ let match = [
   },
   {
     detail:
-      "Eve and Frank both swiped right because of their mutual interest in cooking. After their first meeting at a cooking class, they continued to explore cuisines from different cultures. They recently opened a small cafe together",
+      "Eve and Frank both swiped right because of their mutual interest in cooking. After their first meeting at a cooking class, they continued to explore cuisines from different cultures. They recently opened a small cafe together. ",
   },
 ]
 let match_html = ``
 match.forEach((item, index) => {
   match_html += `
-              <div class="match-container_div__content">
-               
-                  
-                  ${item.detail}
-                
-              
-              </div>`
+                  <span  class="match-container_div__content___scroll">${item.detail}</span>
+              `
 })
 
-document.querySelector(`.match-container_div`).innerHTML = match_html
-let current_index = 0
-//matching items animation
-function update_content() {
-  let contents = document.querySelectorAll(`.match-container_div__content`)
+document.querySelector(`.match-container_div__content`).innerHTML = match_html
 
-  contents.forEach((content, index) => {
-    if (index === current_index) {
-      content.classList.add(`visible`)
-      content.classList.remove(`hidden`)
-    } else {
-      content.classList.add(`hidden`)
-      content.classList.remove(`visible`)
-    }
-  })
-  current_index = (current_index + 1) % match.length
-}
-
-setInterval(() => {
-  update_content()
-}, 11500)
+//duplicating scroll content for smoother sliding
+let scroll_inner = document.querySelector(`.match-container_div__content`)
+let scroll_content = Array.from(scroll_inner.children)
+scroll_content.forEach(item => {
+  let duplicated_text = item.cloneNode(true)
+  console.log(duplicated_text)
+  scroll_inner.append(duplicated_text)
+})
 
 //footer
 let year = new Date().getFullYear()
