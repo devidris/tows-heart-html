@@ -300,21 +300,28 @@ body {
   width: 25%;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   align-items: end;
 }
 .intro-container_body__div___right____fives-star-rating {
   width: 120px;
+  position: absolute;
+  top: 150px;
 }
 .intro-container_body__div___right____happy-customer-number-span {
   color: #161616;
   font-weight: 500;
   font-size: 27px;
   margin-top: 15px;
+  position: absolute;
+  top: 180px;
 }
 .intro-container_body__div___right____happy-customer-span {
   color: #161616;
   font-size: 14px;
+  position: absolute;
+  top: 235px;
 }
 @media (max-width: 900px) {
   .intro-container_body {
@@ -355,7 +362,7 @@ body {
   .intro-container_body__div___left {
     z-index: 5;
     width: 100%;
-    height: 30%;
+    height: 10%;
 
     justify-content: center;
   }
