@@ -341,8 +341,8 @@ body {
     width: 95%;
   }
   .intro-container_body__span-2 {
-    font-size: 30px;
-    margin-bottom: 0;
+    font-size: 24px;
+    margin-top: 10px;
   }
   .intro-container_body__div___left {
     z-index: 5;
@@ -1011,14 +1011,14 @@ body {
   }
   .benefit-container_div__left {
     width: 100%;
-    height: 100%;
+    height: 80%;
   }
   .benefit-container_div__left___container {
     height: 100%;
     width: 85%;
   }
   .benefit-container_div__left___img {
-    top: -18px;
+    top: -19px;
   }
   .benefit-container_div__right {
     width: 100%;
@@ -1175,7 +1175,7 @@ body {
 }
 @media (max-width: 600px) {
   .testimonial-container {
-    height: 37rem;
+    height: 39rem;
   }
   .testimonial-container_div {
     width: 90%;
