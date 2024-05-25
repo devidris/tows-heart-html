@@ -321,7 +321,7 @@ body {
   color: #161616;
   font-size: 14px;
   position: absolute;
-  top: 235px;
+  top: 230px;
 }
 @media (max-width: 900px) {
   .intro-container_body {
@@ -343,16 +343,13 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .intro-container {
-    height: 35rem;
-  }
   .intro-container_body {
     width: 95%;
   }
   .intro-container_body__span-2 {
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .intro-container_body__div {
     flex-direction: column;
@@ -362,7 +359,7 @@ body {
   .intro-container_body__div___left {
     z-index: 5;
     width: 100%;
-    height: 10%;
+    height: 20%;
 
     justify-content: center;
   }
@@ -371,7 +368,7 @@ body {
   }
   .intro-container_body__div___middle {
     width: 100%;
-    height: 90%;
+    height: 80%;
   }
   .intro-container_body__div___middle figure {
     display: flex;
