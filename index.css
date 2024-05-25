@@ -94,7 +94,7 @@ body {
 
 @media (max-width: 999px) {
   .header-container {
-    top: -2px;
+    top: 0;
     height: 5rem;
   }
   .header-container_div {
@@ -120,7 +120,7 @@ body {
     left: 0;
     right: 0;
     background-color: var(--header-color);
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     transition: all 1s;
@@ -137,6 +137,7 @@ body {
     gap: 30px;
     margin-top: 20px;
   }
+
   .hamburger {
     display: flex;
     gap: 5px;
