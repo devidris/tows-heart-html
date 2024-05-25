@@ -425,9 +425,9 @@ body {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .intro-container {
-    height: 40rem;
+    height: 35rem;
   }
   @keyframes slider {
     0% {
@@ -437,35 +437,23 @@ body {
       left: 0;
     }
     30% {
-      left: -125%;
+      left: -100%;
     }
     50% {
-      left: -125%;
+      left: -100%;
     }
     55% {
-      left: -230%;
+      left: -200%;
     }
     80% {
-      left: -230%;
+      left: -200%;
     }
     85% {
-      left: -350%;
+      left: -300%;
     }
     100% {
-      left: -350%;
+      left: -300%;
     }
-  }
-  .intro-container_body__div___left {
-    z-index: 5;
-    width: 100%;
-    height: 10%;
-  }
-  .intro-container_body__div___left span {
-    font-size: 14px;
-  }
-  .intro-container_body__div___middle {
-    width: 100%;
-    height: 90%;
   }
 }
 @media (max-width: 320px) {
