@@ -117,11 +117,11 @@ body {
   }
   .header-container_div__right {
     position: fixed;
-    top: -100%;
+    top: -150%;
     left: 0;
     right: 0;
     background-color: var(--header-color);
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     transition: all 1s;
