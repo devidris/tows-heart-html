@@ -426,9 +426,11 @@ body {
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
   opacity: 0;
   transition: 0.5s;
   cursor: pointer;
+  z-index: 5;
 }
 .selector-container_div__selector___list.active {
   opacity: 1;
