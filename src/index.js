@@ -334,7 +334,7 @@ document.querySelector(
 ).innerHTML = `copyright@${year}-All rights reserved`
 
 // Hero page slider animation
-const images = ["./public/hero_2.png", "./public/hero_3.png"]
+const images = ["./public/hero_1.png", "./public/hero_3.png"]
 let currentIndex = 0
 
 const imageDiv = document.querySelector(
