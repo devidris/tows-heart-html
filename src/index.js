@@ -1,61 +1,129 @@
-import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"
 
 // Header responsiveness
-let hamburger = document.querySelector(`.hamburger`);
-let menu_container = document.querySelector(`.header-container_div__right`);
-let logo_name = document.querySelector(`.header-container_div__left`);
-console.log(hamburger);
+let hamburger = document.querySelector(`.hamburger`)
+let menu_container = document.querySelector(`.header-container_div__right`)
+let logo_name = document.querySelector(`.header-container_div__left`)
+console.log(hamburger)
 hamburger.addEventListener(`click`, () => {
-  hamburger.classList.toggle(`active`);
-  menu_container.classList.toggle(`active`);
-  logo_name.classList.toggle(`active`);
-});
+  hamburger.classList.toggle(`active`)
+  menu_container.classList.toggle(`active`)
+  logo_name.classList.toggle(`active`)
+})
 // This is a very bad practise but omo i tried to use onclick in the html file but it keeps telling me the function isnt defined
-let menu_item = document.querySelector(`.span`);
-let menu_item_2 = document.querySelector(`.span-2`);
-let menu_item_3 = document.querySelector(`.span-3`);
-let menu_item_4 = document.querySelector(`.span-4`);
-let menu_item_5 = document.querySelector(`.span-5`);
-let menu_item_6 = document.querySelector(`.span-6`);
+let menu_item = document.querySelector(`.span`)
+let menu_item_2 = document.querySelector(`.span-2`)
+let menu_item_3 = document.querySelector(`.span-3`)
+let menu_item_4 = document.querySelector(`.span-4`)
+let menu_item_5 = document.querySelector(`.span-5`)
+let menu_item_6 = document.querySelector(`.span-6`)
 
 menu_item.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`);
-  menu_container.classList.remove(`active`);
-  console.log(`red`);
-});
+  hamburger.classList.remove(`active`)
+  menu_container.classList.remove(`active`)
+  console.log(`red`)
+})
 menu_item_2.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`);
-  menu_container.classList.remove(`active`);
-  console.log(`red`);
-});
+  hamburger.classList.remove(`active`)
+  menu_container.classList.remove(`active`)
+  console.log(`red`)
+})
 menu_item_3.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`);
-  menu_container.classList.remove(`active`);
-  console.log(`red`);
-});
+  hamburger.classList.remove(`active`)
+  menu_container.classList.remove(`active`)
+  console.log(`red`)
+})
 menu_item_4.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`);
-  menu_container.classList.remove(`active`);
-  console.log(`red`);
-});
+  hamburger.classList.remove(`active`)
+  menu_container.classList.remove(`active`)
+  console.log(`red`)
+})
 menu_item_5.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`);
-  menu_container.classList.remove(`active`);
-  console.log(`red`);
-});
+  hamburger.classList.remove(`active`)
+  menu_container.classList.remove(`active`)
+  console.log(`red`)
+})
 menu_item_6.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`);
-  menu_container.classList.remove(`active`);
-  console.log(`red`);
-});
+  hamburger.classList.remove(`active`)
+  menu_container.classList.remove(`active`)
+  console.log(`red`)
+})
 
-//Intro animation
-let current_image = document.querySelector(
-  `.intro-container_body__div___middle____current`
-);
-let next_image = document.querySelector(
-  `.intro-container_body__div___middle____next`
-);
+//selector array
+const selector_array = [
+  {
+    heading: `Looking for`,
+    list_heading: `Female`,
+    list_item_1: `Male`,
+    list_item_2: `Female`,
+    list_item_3: `Other`,
+  },
+  {
+    heading: `Age`,
+    list_heading: `22 years`,
+    list_item_1: `18 years`,
+    list_item_2: `20 years`,
+    list_item_3: `22 years`,
+  },
+  {
+    heading: `Location`,
+    list_heading: `Canada`,
+    list_item_1: `US`,
+    list_item_2: `canada`,
+    list_item_3: `England`,
+  },
+]
+let selector_html = ``
+selector_array.forEach((item, index) => {
+  selector_html += ` 
+      <div class="selector-container_div__selector"> 
+       <span class="selector-container_div__selector___span"> ${item.heading}</span>
+       <div class="selector-container_div__selector___flex">
+        <span class="selector-container_div__selector___flex_____selected">${item.list_heading}</span>
+        <div class="selector-container_div__selector___flex____carot"></div>
+       </div>
+       <div class="selector-container_div__selector___list">
+        <span> ${item.list_item_1}</span>
+        <span>  ${item.list_item_2} </span>
+        <span>  ${item.list_item_3}</span>
+       </div>
+       
+      
+      </div>
+       
+            
+            `
+})
+
+document.querySelector(`.selector-container_div`).innerHTML =
+  selector_html + `<a> Search </a>`
+
+document.querySelectorAll(`.selector-container_div__selector`).forEach(item => {
+  let selector = item.querySelector(`.selector-container_div__selector___flex`)
+  let selector_title = item.querySelector(
+    `.selector-container_div__selector___flex_____selected`
+  )
+  let carot = item.querySelector(
+    `.selector-container_div__selector___flex____carot`
+  )
+  let menu_list = item.querySelector(`.selector-container_div__selector___list`)
+  let options = item.querySelectorAll(
+    `.selector-container_div__selector___list span`
+  )
+
+  selector.addEventListener(`click`, () => {
+    carot.classList.toggle(`rotate`)
+    menu_list.classList.toggle(`active`)
+  })
+
+  options.forEach(option => {
+    option.addEventListener(`click`, () => {
+      selector_title.innerText = option.innerText
+      carot.classList.remove(`rotate`)
+      menu_list.classList.remove(`active`)
+    })
+  })
+})
 
 //Workings array
 let working_array = [
@@ -74,9 +142,9 @@ let working_array = [
     heading: "Start Dating",
     detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
-];
+]
 
-let working_html = ``;
+let working_html = ``
 working_array.forEach((item, index) => {
   working_html += `
                 <div
@@ -94,11 +162,11 @@ working_array.forEach((item, index) => {
                   <span class="workings-container_body__grid___content____span-2">
                    ${item.detail}
                   </span>
-                </div>`;
-});
+                </div>`
+})
 
 document.querySelector(`.workings-container_body__grid`).innerHTML =
-  working_html;
+  working_html
 
 //Benefits array
 let project_cart = [
@@ -118,8 +186,8 @@ let project_cart = [
     stats: "450+",
     detail: "Projects Completed",
   },
-];
-let benefits_html = ``;
+]
+let benefits_html = ``
 project_cart.forEach((project, index) => {
   benefits_html += `
                   <div class="benefit-container_div__right___achievement____stats">
@@ -132,11 +200,11 @@ project_cart.forEach((project, index) => {
                      ${project.detail}
                     </span>
                   </div> 
-  `;
-});
+  `
+})
 document.querySelector(
   `.benefit-container_div__right___achievement`
-).innerHTML = benefits_html;
+).innerHTML = benefits_html
 
 //testimonial array
 
@@ -166,9 +234,9 @@ let slider_cart = [
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit.",
   },
-];
+]
 
-let slider_html = ``;
+let slider_html = ``
 
 slider_cart.forEach((slide, index) => {
   slider_html += ` 
@@ -194,18 +262,18 @@ slider_cart.forEach((slide, index) => {
              
             
               
-            `;
-});
+            `
+})
 
-document.querySelector(`.swiper-wrapper`).innerHTML = slider_html;
-let slides_per_view = ``;
+document.querySelector(`.swiper-wrapper`).innerHTML = slider_html
+let slides_per_view = ``
 //updating number of slides per view
 if (window.innerWidth <= 600) {
-  slides_per_view = 1;
-  console.log(true);
+  slides_per_view = 1
+  console.log(true)
 } else {
-  slides_per_view = 3;
-  console.log(false);
+  slides_per_view = 3
+  console.log(false)
 }
 let swiper = new Swiper(".my-swiper", {
   slidesPerView: slides_per_view,
@@ -214,7 +282,7 @@ let swiper = new Swiper(".my-swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-});
+})
 
 //match array
 let match = [
@@ -230,50 +298,60 @@ let match = [
     detail:
       "Eve and Frank both swiped right because of their mutual interest in cooking. After their first meeting at a cooking class, they continued to explore cuisines from different cultures. They recently opened a small cafe together. ",
   },
-];
-let match_html = ``;
+]
+let match_html = ``
 match.forEach((item, index) => {
   match_html += `
                   <span  class="match-container_div__content___scroll">${item.detail}</span>
-              `;
-});
+              `
+})
 
-document.querySelector(`.match-container_div__content`).innerHTML = match_html;
+document.querySelector(`.match-container_div__content`).innerHTML = match_html
 
 //duplicating scroll content for smoother sliding
-let scroll_inner = document.querySelector(`.match-container_div__content`);
-let scroll_content = Array.from(scroll_inner.children);
-scroll_content.forEach((item) => {
-  let duplicated_text = item.cloneNode(true);
+let scroll_inner = document.querySelector(`.match-container_div__content`)
+let scroll_content = Array.from(scroll_inner.children)
+scroll_content.forEach(item => {
+  let duplicated_text = item.cloneNode(true)
 
-  scroll_inner.append(duplicated_text);
-});
+  scroll_inner.append(duplicated_text)
+})
+//run animation only when in view
+const animated_content = document.querySelector(`.match-container_div__content`)
+const observer = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    animated_content.classList.add(`animation`)
+  } else {
+    animated_content.classList.remove(`animation`)
+  }
+})
+observer.observe(animated_content)
 
 //footer
-let year = new Date().getFullYear();
+let year = new Date().getFullYear()
 document.querySelector(
   `.footer-container_break-line span`
-).innerHTML = `copyright@${year}-All rights reserved`;
+).innerHTML = `copyright@${year}-All rights reserved`
 
 // Hero page slider animation
-const images = ["./public/hero_1.png", "./public/hero_3.png"];
-let currentIndex = 0;
+const images = ["./public/hero_1.png", "./public/hero_3.png"]
+let currentIndex = 0
 
 const imageDiv = document.querySelector(
   ".intro-container_body__div___middle figure div img"
-);
+)
 
 function updateImage() {
-  imageDiv.style.opacity = "0"; // Fade out the image
+  imageDiv.style.opacity = "0" // Fade out the image
   setTimeout(() => {
-    currentIndex = (currentIndex + 1) % images.length; // Update index to loop through images
-    imageDiv.src = images[currentIndex]; // Change the image source
-    imageDiv.style.opacity = "1"; // Fade in the new image
-  }, 700); // Time to wait before changing the source and fading in
+    currentIndex = (currentIndex + 1) % images.length // Update index to loop through images
+    imageDiv.src = images[currentIndex] // Change the image source
+    imageDiv.style.opacity = "1" // Fade in the new image
+  }, 700) // Time to wait before changing the source and fading in
 }
 
 setInterval(() => {
   // Apply a sliding transition effect
-  imageDiv.style.transition = "opacity 0.5s ease-out";
-  updateImage();
-}, 5000); // Change image every 3 seconds
+  imageDiv.style.transition = "opacity 0.5s ease-out"
+  updateImage()
+}, 5000) // Change image every 3 seconds
