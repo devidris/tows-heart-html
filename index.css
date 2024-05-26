@@ -549,7 +549,11 @@ body {
     }
   }
 }
-
+@media (min-width: 2000px) {
+  .intro-container {
+    height: 50rem;
+  }
+}
 /*Selector Styling*/
 .selector-container {
   display: flex;
@@ -1078,6 +1082,15 @@ body {
     .benefit-container_div__left___container {
       height: 92%;
     }
+  }
+}
+@media (min-width: 2000px) {
+  .benefit-container_div__left___container {
+    width: 60%;
+    height: 90%;
+  }
+  .benefit-container_div__left {
+    align-items: start;
   }
 }
 
