@@ -11,42 +11,16 @@ hamburger.addEventListener(`click`, () => {
   logo_name.classList.toggle(`active`)
 })
 // This is a very bad practise but omo i tried to use onclick in the html file but it keeps telling me the function isnt defined
-let menu_item = document.querySelector(`.span`)
-let menu_item_2 = document.querySelector(`.span-2`)
-let menu_item_3 = document.querySelector(`.span-3`)
-let menu_item_4 = document.querySelector(`.span-4`)
-let menu_item_5 = document.querySelector(`.span-5`)
-let menu_item_6 = document.querySelector(`.span-6`)
+let menu_item = document.querySelectorAll(
+  `.header-container_div__right___cont span`
+)
+console.log(menu_item)
 
-menu_item.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`)
-  menu_container.classList.remove(`active`)
-  console.log(`red`)
-})
-menu_item_2.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`)
-  menu_container.classList.remove(`active`)
-  console.log(`red`)
-})
-menu_item_3.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`)
-  menu_container.classList.remove(`active`)
-  console.log(`red`)
-})
-menu_item_4.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`)
-  menu_container.classList.remove(`active`)
-  console.log(`red`)
-})
-menu_item_5.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`)
-  menu_container.classList.remove(`active`)
-  console.log(`red`)
-})
-menu_item_6.addEventListener(`click`, () => {
-  hamburger.classList.remove(`active`)
-  menu_container.classList.remove(`active`)
-  console.log(`red`)
+menu_item.forEach(list => {
+  list.addEventListener(`click`, () => {
+    hamburger.classList.remove(`active`)
+    menu_container.classList.remove(`active`)
+  })
 })
 
 //selector array
