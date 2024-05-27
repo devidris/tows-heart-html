@@ -253,7 +253,7 @@ body {
   /* width: 30%; */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 .intro-container_body__div___left span {
   color: #161616;
@@ -265,24 +265,39 @@ body {
   justify-content: center;
   cursor: pointer;
   position: relative;
+  width: 100px;
+  background-color: #13836c;
+  padding: 7px 10px;
+  height: 20px;
+  border-radius: 20px;
+  transition: 1s;
 }
 .intro-container_body__div___left____button-container a {
   position: absolute;
-  padding: 7px 10px;
-  background-color: #13836c;
-  border-radius: 20px;
-  width: 100px;
-  left: 0;
+  left: 10px;
   color: var(--font-color);
   font-size: 14px;
+  transition: 1s;
+  text-decoration: none;
+}
+.intro-container_body__div___left____button-container.active {
+  background-color: #03473a;
+}
+.intro-container_body__div___left____button-container a.slide_toggle {
+  left: 45px;
+  white-space: nowrap;
+}
+.intro-container_body__div___left____button-container_____right-arrow.slide {
+  left: 10px;
 }
 .intro-container_body__div___left____button-container_____right-arrow {
   color: #13836c;
   background-color: var(--font-color);
   padding: 5px;
-  border-radius: 100%;
+  border-radius: 100vmin;
   position: absolute;
   left: 90px;
+  transition: 1s;
 }
 .intro-container_body__div___middle {
   overflow: hidden;
@@ -394,6 +409,7 @@ body {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  width: fit-content;
 }
 .selector-container_div__selector___flex :nth-child(1) {
   font-size: 13px;
@@ -447,6 +463,12 @@ body {
   border: 1px solid var(--font-color);
   border-radius: 20px;
   font-size: 14px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.selector-container_div a:hover {
+  background-color: var(--font-color);
+  color: var(--footer-color);
 }
 @media (max-width: 57rem) {
   .selector-container_div {
@@ -468,6 +490,7 @@ body {
   .selector-container_div a {
     padding: 5px 10px;
     font-size: 12px;
+    margin: auto;
   }
   .selector-container_div a {
     width: 80px;
@@ -560,6 +583,10 @@ body {
   border-radius: 20px;
   cursor: pointer;
 }
+.workings-container_body__buttons___link:hover {
+  background-color: var(--font-color);
+  color: var(--header-color);
+}
 .workings-container_body__buttons___container {
   background-color: var(--font-color);
   color: var(--header-color);
@@ -573,6 +600,11 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: 0.7s;
+}
+.workings-container_body__buttons___container:hover {
+  background-color: var(--header-color);
+  color: var(--font-color);
 }
 .workings-container_body__buttons___container a {
   position: relative;
@@ -585,6 +617,12 @@ body {
   position: absolute;
   padding: 6px;
   right: 1px;
+  transition: 1s;
+}
+.workings-container_body__buttons___container:hover
+  .workings-container_body__buttons___container____right-arrow {
+  background-color: var(--font-color);
+  color: var(--header-color);
 }
 @media (max-width: 57em) {
   .workings-container_body {
@@ -715,6 +753,11 @@ body {
   padding: 5px 15px;
   border-radius: 20px;
   cursor: pointer;
+  transition: 1s;
+}
+.featurs-container_div__button___link:hover {
+  color: var(--font-color);
+  background-color: var(--header-color);
 }
 .featurs-container_div__button___container {
   background-color: var(--header-color);
@@ -729,6 +772,16 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: 1s;
+}
+.featurs-container_div__button___container:hover {
+  background-color: var(--font-color);
+  color: var(--header-color);
+}
+.featurs-container_div__button___container:hover
+  .featurs-container_div__button___container____right-arrow {
+  color: var(--font-color);
+  background-color: var(--header-color);
 }
 .featurs-container_div__button___container a {
   position: relative;
@@ -741,6 +794,7 @@ body {
   position: absolute;
   right: 1px;
   padding: 5px;
+  transition: 1s;
 }
 @media (max-width: 57em) {
   .featurs-container_div {
@@ -881,6 +935,16 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: 1s;
+}
+.benefit-container_div__right___button____container:hover {
+  background-color: var(--font-color);
+  color: var(--header-color);
+}
+.benefit-container_div__right___button____container:hover
+  .benefit-container_div__right___button____container_____right-arrow {
+  color: var(--font-color);
+  background-color: var(--header-color);
 }
 .benefit-container_div__right___button____container a {
   position: relative;
@@ -1000,6 +1064,11 @@ body {
   padding: 5px 15px;
   border-radius: 20px;
   cursor: pointer;
+  transition: 1s;
+}
+.testimonial-container_div__button___link:hover {
+  color: var(--header-color);
+  background-color: var(--font-color);
 }
 .testimonial-container_div__button___container {
   background-color: var(--font-color);
@@ -1014,6 +1083,16 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: 1s;
+}
+.testimonial-container_div__button___container:hover {
+  color: var(--font-color);
+  background-color: var(--header-color);
+}
+.testimonial-container_div__button___container:hover
+  .testimonial-container_div__button___container____right-arrow {
+  color: var(--header-color);
+  background-color: var(--font-color);
 }
 .testimonial-container_div__button___container a {
   position: relative;
@@ -1026,6 +1105,7 @@ body {
   position: absolute;
   right: 1px;
   padding: 5px;
+  transition: 1s;
 }
 .testimonial-container_div__slider {
   width: 100%;
@@ -1074,7 +1154,7 @@ body {
 .testimonial-container_div__slider___container____image {
   height: 40px;
   width: 40px;
-  border-radius: 100%;
+  border-radius: 100vmin;
   position: absolute;
   top: -30px;
   left: 30px;
@@ -1172,7 +1252,12 @@ body {
   color: var(--font-color);
   font-size: 12px;
   cursor: pointer;
+  transition: 1s;
 }
+.email-container_body__email-container___button:hover {
+  background-color: #03473a;
+}
+
 .email-container_body__email-container input {
   height: 40px;
   width: 350px;
@@ -1327,9 +1412,8 @@ body {
   .footer-container_div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
-    width: 90%;
 
+    width: 90%;
     height: 90%;
   }
   .footer-container_div__content-1 {

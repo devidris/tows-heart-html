@@ -14,13 +14,35 @@ hamburger.addEventListener(`click`, () => {
 let menu_item = document.querySelectorAll(
   `.header-container_div__right___cont span`
 )
-console.log(menu_item)
 
 menu_item.forEach(list => {
   list.addEventListener(`click`, () => {
     hamburger.classList.remove(`active`)
     menu_container.classList.remove(`active`)
   })
+})
+
+//intro slide in toggle and redirect
+let redirect_link = "https://www.example.com"
+const toggle = document.querySelector(
+  `.intro-container_body__div___left____button-container`
+)
+const toggle_arrow = document.querySelector(
+  `.intro-container_body__div___left____button-container_____right-arrow`
+)
+const toggle_a = document.querySelector(
+  `.intro-container_body__div___left____button-container a`
+)
+toggle.addEventListener(`click`, () => {
+  toggle.classList.toggle(`active`)
+  toggle_arrow.classList.toggle(`slide`)
+  toggle_a.classList.toggle(`slide_toggle`)
+  setTimeout(() => {
+    window.open(redirect_link, "_blank")
+    toggle.classList.remove(`active`)
+    toggle_arrow.classList.remove(`slide`)
+    toggle_a.classList.remove(`slide_toggle`)
+  }, 1100)
 })
 
 //selector array
@@ -70,7 +92,7 @@ selector_array.forEach((item, index) => {
 })
 
 document.querySelector(`.selector-container_div`).innerHTML =
-  selector_html + `<a> Search </a>`
+  selector_html + `<a class="selector-container_div__button"> Search </a>`
 
 document.querySelectorAll(`.selector-container_div__selector`).forEach(item => {
   let selector = item.querySelector(`.selector-container_div__selector___flex`)
@@ -96,6 +118,14 @@ document.querySelectorAll(`.selector-container_div__selector`).forEach(item => {
       carot.classList.remove(`rotate`)
       menu_list.classList.remove(`active`)
     })
+  })
+
+  //logging value when the search button is click
+  const search_button = document.querySelector(
+    `.selector-container_div__button`
+  )
+  search_button.addEventListener(`click`, () => {
+    console.log(selector_title.innerText)
   })
 })
 
@@ -300,6 +330,19 @@ const observer = new IntersectionObserver(entries => {
   }
 })
 observer.observe(animated_content)
+
+//logging email input
+const send_button = document.querySelector(
+  `.email-container_body__email-container___button`
+)
+let input_value = document.querySelector(
+  `.email-container_body__email-container___input`
+)
+send_button.addEventListener(`click`, () => {
+  let value = input_value.value
+  console.log(value)
+  input_value.value = ``
+})
 
 //footer
 let year = new Date().getFullYear()
