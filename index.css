@@ -92,7 +92,7 @@ body {
   align-items: flex-end;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 57em) {
   .header-container {
     top: 0;
     height: 5rem;
@@ -137,6 +137,11 @@ body {
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
+  }
+  .header-container_div__right span:hover {
+    background-color: #043469;
+    padding: 15px 20px;
+    border-radius: 5px;
   }
 
   .hamburger {
