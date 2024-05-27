@@ -1343,8 +1343,6 @@ body {
   }
 }
 @media (max-width: 20em) {
-  .footer-container {
-  }
   .footer-container_div__content-1___icons {
     gap: 10px;
   }
