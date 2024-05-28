@@ -962,6 +962,7 @@ body {
   height: 30rem;
   background-color: #f3f4f8;
   position: relative;
+  overflow: hidden;
 }
 .benefit-container_div {
   display: flex;
