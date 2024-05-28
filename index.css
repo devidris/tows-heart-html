@@ -43,6 +43,7 @@ body {
   grid-template-columns: 1fr 3fr;
   align-items: center;
   border-radius: 52px;
+  transition: box-shadow 0.3s;
 }
 .header-container_div__left {
   color: var(--font-color);
@@ -93,7 +94,7 @@ body {
 }
 @media (min-width: 69rem) {
   .header-container_div.scroll {
-    box-shadow: 0 4px 6px -1px rgba(18, 19, 19, 0.7);
+    box-shadow: 0 4px 5px -1px rgba(18, 19, 19, 0.7);
   }
 }
 @media (max-width: 57em) {
@@ -609,7 +610,8 @@ body {
 
 .workings-container_body__buttons___container a {
   position: relative;
-  left: -12px;
+  left: 10px;
+  transition: 1s;
 }
 .workings-container_body__buttons___container____right-arrow {
   background-color: var(--header-color);
@@ -617,10 +619,15 @@ body {
   color: var(--font-color);
   position: absolute;
   padding: 6px;
-  right: 1px;
+  left: 2px;
   transition: 1s;
 }
-
+.workings-container_body__buttons___container a.active {
+  left: -12px;
+}
+.workings-container_body__buttons___container____right-arrow.active {
+  left: 78px;
+}
 @media only screen and (min-width: 69em) {
   .workings-container_body__buttons___link:hover {
     background-color: var(--font-color);
@@ -789,16 +796,23 @@ body {
 
 .featurs-container_div__button___container a {
   position: relative;
-  left: -12px;
+  left: 10px;
+  transition: 1s;
 }
 .featurs-container_div__button___container____right-arrow {
   background-color: var(--font-color);
   border-radius: 100%;
   color: var(--header-color);
   position: absolute;
-  right: 1px;
+  left: 3px;
   padding: 5px;
   transition: 1s;
+}
+.featurs-container_div__button___container a.active {
+  left: -12px;
+}
+.featurs-container_div__button___container____right-arrow.active {
+  left: 80px;
 }
 @media only screen and (min-width: 69em) {
   .featurs-container_div__button___link:hover {
@@ -958,15 +972,23 @@ body {
 
 .benefit-container_div__right___button____container a {
   position: relative;
-  left: -12px;
+  left: 10px;
+  transition: 1s;
 }
 .benefit-container_div__right___button____container_____right-arrow {
   background-color: var(--font-color);
   border-radius: 100%;
   color: var(--header-color);
   position: absolute;
-  right: 1px;
+  left: 3px;
   padding: 5px;
+  transition: 1s;
+}
+.benefit-container_div__right___button____container a.active {
+  left: -12px;
+}
+.benefit-container_div__right___button____container_____right-arrow.active {
+  left: 80px;
 }
 @media only screen and (min-width: 69em) {
   .benefit-container_div__right___button____container:hover {
@@ -1105,16 +1127,24 @@ body {
 
 .testimonial-container_div__button___container a {
   position: relative;
-  left: -12px;
+  left: 10px;
+  transition: 1s;
 }
 .testimonial-container_div__button___container____right-arrow {
   background-color: var(--header-color);
   border-radius: 100%;
   color: var(--font-color);
   position: absolute;
-  right: 1px;
+  left: 3px;
+
   padding: 5px;
   transition: 1s;
+}
+.testimonial-container_div__button___container a.active {
+  left: -12px;
+}
+.testimonial-container_div__button___container____right-arrow.active {
+  left: 80px;
 }
 .testimonial-container_div__slider {
   width: 100%;
@@ -1179,6 +1209,7 @@ body {
 .testimonial-container_div__slider .swiper-pagination-bullet-active {
   background-color: var(--font-color);
 }
+
 @media only screen and (min-width: 69em) {
   .testimonial-container_div__button___link:hover {
     color: var(--header-color);

@@ -186,6 +186,35 @@ working_array.forEach((item, index) => {
 
 document.querySelector(`.workings-container_body__grid`).innerHTML =
   working_html
+//work toggle effect
+const work_toggle = document.querySelector(
+  `.workings-container_body__buttons___container`
+)
+const work_toggle_a = document.querySelector(
+  `.workings-container_body__buttons___container a`
+)
+const work_toggle_arrow = document.querySelector(
+  `.workings-container_body__buttons___container____right-arrow`
+)
+work_toggle.addEventListener(`click`, () => {
+  work_toggle_a.classList.toggle(`active`)
+  work_toggle_arrow.classList.toggle(`active`)
+})
+
+//features toggle effect
+const features_toggle = document.querySelector(
+  `.featurs-container_div__button___container`
+)
+const features_toggle_a = document.querySelector(
+  `.featurs-container_div__button___container a`
+)
+const features_toggle_arrow = document.querySelector(
+  `.featurs-container_div__button___container____right-arrow`
+)
+features_toggle.addEventListener(`click`, () => {
+  features_toggle_a.classList.toggle(`active`)
+  features_toggle_arrow.classList.toggle(`active`)
+})
 
 //Benefits array
 let project_cart = [
@@ -224,6 +253,21 @@ project_cart.forEach((project, index) => {
 document.querySelector(
   `.benefit-container_div__right___achievement`
 ).innerHTML = benefits_html
+
+//benefit toggle effect
+const benefit_toggle = document.querySelector(
+  `.benefit-container_div__right___button____container`
+)
+const benefit_toggle_a = document.querySelector(
+  `.benefit-container_div__right___button____container a`
+)
+const benefit_toggle_arrow = document.querySelector(
+  `.benefit-container_div__right___button____container_____right-arrow`
+)
+benefit_toggle.addEventListener(`click`, () => {
+  benefit_toggle_a.classList.toggle(`active`)
+  benefit_toggle_arrow.classList.toggle(`active`)
+})
 
 //testimonial array
 
@@ -301,6 +345,21 @@ let swiper = new Swiper(".my-swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+})
+
+//testimonial toggle effect
+const testimonial_toggle = document.querySelector(
+  `.testimonial-container_div__button___container`
+)
+const testimonial_toggle_a = document.querySelector(
+  `.testimonial-container_div__button___container a`
+)
+const testimonial_toggle_arrow = document.querySelector(
+  `.testimonial-container_div__button___container____right-arrow`
+)
+testimonial_toggle.addEventListener(`click`, () => {
+  testimonial_toggle_a.classList.toggle(`active`)
+  testimonial_toggle_arrow.classList.toggle(`active`)
 })
 
 //match array
