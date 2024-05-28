@@ -21,6 +21,19 @@ menu_item.forEach(list => {
     menu_container.classList.remove(`active`)
   })
 })
+//Header having a box-shadow on scroll
+document.addEventListener(`DOMContentLoaded`, () => {
+  const header = document.querySelector(`.header-container`)
+  const header_container = document.querySelector(`.header-container_div`)
+  window.addEventListener(`scroll`, () => {
+    if (window.scrollY > 0) {
+      header_container.classList.add(`scroll`)
+      console.log(`good`)
+    } else {
+      header_container.classList.remove(`scroll`)
+    }
+  })
+})
 
 //intro slide in toggle and redirect
 let redirect_link = "https://www.example.com"

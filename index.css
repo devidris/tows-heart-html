@@ -91,7 +91,11 @@ body {
   display: none;
   align-items: flex-end;
 }
-
+@media (min-width: 69rem) {
+  .header-container_div.scroll {
+    box-shadow: 0 4px 6px -1px rgba(18, 19, 19, 0.7);
+  }
+}
 @media (max-width: 57em) {
   .header-container {
     top: 0;
