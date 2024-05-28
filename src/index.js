@@ -19,6 +19,7 @@ menu_item.forEach(list => {
   list.addEventListener(`click`, () => {
     hamburger.classList.remove(`active`)
     menu_container.classList.remove(`active`)
+    logo_name.classList.remove(`active`)
   })
 })
 //Header having a box-shadow on scroll

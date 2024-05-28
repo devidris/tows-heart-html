@@ -56,7 +56,7 @@ gsap.from(`.workings-container_body__buttons`, {
 //features animation
 gsap.from(`.featurs-container_div__span`, {
   scrollTrigger: `.featurs-container_div__span`,
-  y: "30%",
+  y: "50%",
   opacity: 0,
   duration: 1.5,
 })
