@@ -39,6 +39,8 @@ toggle.addEventListener(`click`, () => {
   toggle_a.classList.toggle(`slide_toggle`)
   setTimeout(() => {
     window.location.href = redirect_link
+  }, 1000)
+  setTimeout(() => {
     toggle.classList.remove(`active`)
     toggle_arrow.classList.remove(`slide`)
     toggle_a.classList.remove(`slide_toggle`)
