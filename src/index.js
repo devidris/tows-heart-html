@@ -44,7 +44,7 @@ toggle.addEventListener(`click`, () => {
     toggle.classList.remove(`active`)
     toggle_arrow.classList.remove(`slide`)
     toggle_a.classList.remove(`slide_toggle`)
-  }, 1500)
+  }, 2500)
 })
 
 //selector array
