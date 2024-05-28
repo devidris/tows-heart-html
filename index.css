@@ -276,7 +276,7 @@ body {
 
 .intro-container_body__div___left____button-container a {
   position: absolute;
-  left: 10px;
+  left: 45px;
 
   font-size: 14px;
   transition: 1s;
@@ -287,11 +287,11 @@ body {
   color: var(--font-color);
 }
 .intro-container_body__div___left____button-container a.slide_toggle {
-  left: 45px;
+  left: 10px;
   white-space: nowrap;
 }
 .intro-container_body__div___left____button-container_____right-arrow.slide {
-  left: 10px;
+  left: 90px;
 }
 .intro-container_body__div___left____button-container_____right-arrow {
   color: #13836c;
@@ -299,7 +299,7 @@ body {
   padding: 5px;
   border-radius: 100vmin;
   position: absolute;
-  left: 90px;
+  left: 8px;
   transition: 1s;
 }
 .intro-container_body__div___middle {
@@ -320,17 +320,7 @@ body {
 .intro-container_body__div___middle figure div {
   height: fit-content;
 }
-@media only screen and (min-width: 69em) {
-  .intro-container_body__div___left____button-container:hover {
-    background-color: var(--font-color);
-    color: var(--header-color);
-  }
-  .intro-container_body__div___left____button-container:hover
-    .intro-container_body__div___left____button-container_____right-arrow {
-    color: var(--font-color);
-    background-color: var(--header-color);
-  }
-}
+
 @media only screen and (max-width: 69em) {
   .intro-container_body__div___middle figure img {
     width: 400px;
