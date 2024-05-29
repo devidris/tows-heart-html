@@ -686,7 +686,10 @@ body {
   cursor: pointer;
   transition: 0.7s;
 }
-
+.workings-container_body__buttons___container.active {
+  background-color: #f3f4f8;
+  border: 1px solid #f3f4f8;
+}
 .workings-container_body__buttons___container a {
   position: relative;
   left: 10px;
@@ -709,15 +712,6 @@ body {
 }
 @media only screen and (min-width: 69em) {
   .workings-container_body__buttons___link:hover {
-    background-color: var(--font-color);
-    color: var(--header-color);
-  }
-  .workings-container_body__buttons___container:hover {
-    background-color: var(--header-color);
-    color: var(--font-color);
-  }
-  .workings-container_body__buttons___container:hover
-    .workings-container_body__buttons___container____right-arrow {
     background-color: var(--font-color);
     color: var(--header-color);
   }
@@ -872,7 +866,10 @@ body {
   cursor: pointer;
   transition: 1s;
 }
-
+.featurs-container_div__button___container.active {
+  background-color: #03473a;
+  color: var(--font-color);
+}
 .featurs-container_div__button___container a {
   position: relative;
   left: 10px;
@@ -895,15 +892,6 @@ body {
 }
 @media only screen and (min-width: 69em) {
   .featurs-container_div__button___link:hover {
-    color: var(--font-color);
-    background-color: var(--header-color);
-  }
-  .featurs-container_div__button___container:hover {
-    background-color: var(--font-color);
-    color: var(--header-color);
-  }
-  .featurs-container_div__button___container:hover
-    .featurs-container_div__button___container____right-arrow {
     color: var(--font-color);
     background-color: var(--header-color);
   }
@@ -1049,6 +1037,10 @@ body {
   cursor: pointer;
   transition: 1s;
 }
+.benefit-container_div__right___button____container.active {
+  background-color: #03473a;
+  color: var(--font-color);
+}
 
 .benefit-container_div__right___button____container a {
   position: relative;
@@ -1070,17 +1062,7 @@ body {
 .benefit-container_div__right___button____container_____right-arrow.active {
   left: 80px;
 }
-@media only screen and (min-width: 69em) {
-  .benefit-container_div__right___button____container:hover {
-    background-color: var(--font-color);
-    color: var(--header-color);
-  }
-  .benefit-container_div__right___button____container:hover
-    .benefit-container_div__right___button____container_____right-arrow {
-    color: var(--font-color);
-    background-color: var(--header-color);
-  }
-}
+
 @media (max-width: 57em) {
   .benefit-container {
     height: 35rem;
@@ -1204,7 +1186,10 @@ body {
   cursor: pointer;
   transition: 1s;
 }
-
+.testimonial-container_div__button___container.active {
+  background-color: #f3f4f8;
+  border: 1px solid #f3f4f8;
+}
 .testimonial-container_div__button___container a {
   position: relative;
   left: 10px;
@@ -1292,15 +1277,6 @@ body {
 
 @media only screen and (min-width: 69em) {
   .testimonial-container_div__button___link:hover {
-    color: var(--header-color);
-    background-color: var(--font-color);
-  }
-  .testimonial-container_div__button___container:hover {
-    color: var(--font-color);
-    background-color: var(--header-color);
-  }
-  .testimonial-container_div__button___container:hover
-    .testimonial-container_div__button___container____right-arrow {
     color: var(--header-color);
     background-color: var(--font-color);
   }

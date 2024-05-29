@@ -198,8 +198,17 @@ const work_toggle_arrow = document.querySelector(
   `.workings-container_body__buttons___container____right-arrow`
 )
 work_toggle.addEventListener(`click`, () => {
+  work_toggle.classList.add(`active`)
   work_toggle_a.classList.toggle(`active`)
   work_toggle_arrow.classList.toggle(`active`)
+  setTimeout(() => {
+    window.location.href = redirect_link
+  }, 1000)
+  setTimeout(() => {
+    work_toggle.classList.remove(`active`)
+    work_toggle_arrow.classList.remove(`active`)
+    work_toggle_a.classList.remove(`active`)
+  }, 2500)
 })
 
 //features toggle effect
@@ -213,8 +222,17 @@ const features_toggle_arrow = document.querySelector(
   `.featurs-container_div__button___container____right-arrow`
 )
 features_toggle.addEventListener(`click`, () => {
+  features_toggle.classList.add(`active`)
   features_toggle_a.classList.toggle(`active`)
   features_toggle_arrow.classList.toggle(`active`)
+  setTimeout(() => {
+    window.location.href = redirect_link
+  }, 1000)
+  setTimeout(() => {
+    features_toggle.classList.remove(`active`)
+    features_toggle_arrow.classList.remove(`active`)
+    features_toggle_a.classList.remove(`active`)
+  }, 2500)
 })
 
 //Benefits array
@@ -266,8 +284,17 @@ const benefit_toggle_arrow = document.querySelector(
   `.benefit-container_div__right___button____container_____right-arrow`
 )
 benefit_toggle.addEventListener(`click`, () => {
+  benefit_toggle.classList.add(`active`)
   benefit_toggle_a.classList.toggle(`active`)
   benefit_toggle_arrow.classList.toggle(`active`)
+  setTimeout(() => {
+    window.location.href = redirect_link
+  }, 1000)
+  setTimeout(() => {
+    benefit_toggle.classList.remove(`active`)
+    benefit_toggle_arrow.classList.remove(`active`)
+    benefit_toggle_a.classList.remove(`active`)
+  }, 2500)
 })
 
 //testimonial array
@@ -359,8 +386,17 @@ const testimonial_toggle_arrow = document.querySelector(
   `.testimonial-container_div__button___container____right-arrow`
 )
 testimonial_toggle.addEventListener(`click`, () => {
+  testimonial_toggle.classList.add(`active`)
   testimonial_toggle_a.classList.toggle(`active`)
   testimonial_toggle_arrow.classList.toggle(`active`)
+  setTimeout(() => {
+    window.location.href = redirect_link
+  }, 1000)
+  setTimeout(() => {
+    testimonial_toggle.classList.remove(`active`)
+    testimonial_toggle_arrow.classList.remove(`active`)
+    testimonial_toggle_a.classList.remove(`active`)
+  }, 2500)
 })
 
 //match array
