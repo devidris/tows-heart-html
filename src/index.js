@@ -301,27 +301,27 @@ benefit_toggle.addEventListener(`click`, () => {
 
 let slider_cart = [
   {
-    image: "../public/developer-0.jpg",
+    image: "./public/developer-0.jpg",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit. ",
   },
   {
-    image: "../public/developer-1.jpg",
+    image: "./public/developer-1.jpg",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit.  ",
   },
   {
-    image: "../public/developer-0.jpg",
+    image: "./public/developer-0.jpg",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit. ",
   },
   {
-    image: "../public/developer-1.jpg",
+    image: "./public/developer-1.jpg",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit. ",
   },
   {
-    image: "../public/developer-0.jpg",
+    image: "./public/developer-0.jpg",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed laoreet mauris. Suspendisse consectetur mattis velit.",
   },
