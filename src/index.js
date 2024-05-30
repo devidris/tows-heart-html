@@ -366,6 +366,9 @@ let slides_per_view = ``
 if (window.innerWidth <= 600) {
   slides_per_view = 1
   console.log(true)
+} else if (window.innerWidth > 600 && window.innerWidth < 999) {
+  slides_per_view = 2
+  console.log(`active`)
 } else {
   slides_per_view = 3
   console.log(false)
