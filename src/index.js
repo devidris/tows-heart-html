@@ -26,17 +26,17 @@ menu_item.forEach(list => {
 
 const header = document.querySelector(`.header-container`)
 const header_container = document.querySelector(`.header-container_div`)
-let last_scroll_top = 0
-let timer
+
 window.addEventListener(`scroll`, () => {
-  let scroll_top = window.scrollY || document.documentElement.scrollTop
+  let scroll_top = window.scrollY
+  console.log(window.scrollY)
   if (window.scrollY > 0) {
     header_container.classList.add(`scroll`)
-    header_container.classList.remove(`active`)
 
     console.log(`good`)
   } else {
     header_container.classList.remove(`scroll`)
+    header_container.classList.remove(`active`)
   }
 })
 
