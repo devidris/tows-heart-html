@@ -39,6 +39,9 @@ function hide_header() {
 
 window.addEventListener(`scroll`, () => {
   let scroll_top = window.scrollY
+  if (timer) {
+    window.clearTimeout(timer)
+  }
   console.log(last_scroll)
 
   if (window.scrollY > 0) {
@@ -53,7 +56,6 @@ window.addEventListener(`scroll`, () => {
   //senior dev idris the problem is that when i set last_scroll = scroll_top, when the scroll event activates again the scroll_top value changes which is not meant to be so and the worst part is im not scrolling
   last_scroll = scroll_top
 
-  window.clearTimeout(timer)
   if (last_scroll === scroll_top && window.scrollY > 0) {
     timer = setTimeout(() => {
       hide_header()
