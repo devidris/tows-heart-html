@@ -29,11 +29,11 @@ let last_scroll
 let timer
 
 function show_header() {
-  header_container.style.opacity = 1
+  header_container.classList.remove(`active`)
   header_container.style.transition = "0.7s"
 }
 function hide_header() {
-  header_container.style.opacity = 0
+  header_container.classList.add(`active`)
   header_container.style.transition = "0.7s"
 }
 
