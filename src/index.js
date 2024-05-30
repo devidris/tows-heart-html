@@ -369,9 +369,9 @@ if (window.innerWidth <= 600) {
 let swiper = new Swiper(".my-swiper", {
   slidesPerView: slides_per_view,
   spaceBetween: 50,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 })
 
