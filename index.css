@@ -1348,7 +1348,7 @@ body {
   }
   .testimonial-container_div__slider___container {
     border: 1px solid var(--font-color);
-    width: 240px;
+    width: 220px;
   }
 }
 @media (max-width: 20em) {
