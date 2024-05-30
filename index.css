@@ -142,6 +142,9 @@ body {
   }
 }
 @media (max-width: 57em) {
+  .header-container_div.scroll {
+    box-shadow: 0 4px 5px -1px rgba(18, 19, 19, 0.7);
+  }
   .header-container_div {
     width: 90%;
   }
