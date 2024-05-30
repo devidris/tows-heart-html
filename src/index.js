@@ -23,17 +23,21 @@ menu_item.forEach(list => {
   })
 })
 //Header having a box-shadow on scroll
-document.addEventListener(`DOMContentLoaded`, () => {
-  const header = document.querySelector(`.header-container`)
-  const header_container = document.querySelector(`.header-container_div`)
-  window.addEventListener(`scroll`, () => {
-    if (window.scrollY > 0) {
-      header_container.classList.add(`scroll`)
-      console.log(`good`)
-    } else {
-      header_container.classList.remove(`scroll`)
-    }
-  })
+
+const header = document.querySelector(`.header-container`)
+const header_container = document.querySelector(`.header-container_div`)
+let last_scroll_top = 0
+let timer
+window.addEventListener(`scroll`, () => {
+  let scroll_top = window.scrollY || document.documentElement.scrollTop
+  if (window.scrollY > 0) {
+    header_container.classList.add(`scroll`)
+    header_container.classList.remove(`active`)
+
+    console.log(`good`)
+  } else {
+    header_container.classList.remove(`scroll`)
+  }
 })
 
 //intro slide in toggle and redirect
@@ -368,7 +372,7 @@ if (window.innerWidth <= 600) {
 }
 let swiper = new Swiper(".my-swiper", {
   slidesPerView: slides_per_view,
-  spaceBetween: 50,
+  spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -457,9 +461,10 @@ send_button.addEventListener(`click`, () => {
 
 //footer
 let year = new Date().getFullYear()
+let next_year = year + 1
 document.querySelector(
   `.footer-container_break-line span`
-).innerHTML = `copyright@${year}-All rights reserved`
+).innerHTML = `copyright ${year}-${next_year} Tows heart, LLC.All rights reserved`
 
 // Hero page slider animation
 const images = ["./public/hero_1.png", "./public/hero_3.png"]
