@@ -433,15 +433,15 @@ testimonial_toggle.addEventListener(`click`, () => {
 let match = [
   {
     detail:
-      "Alice and Bob met on CoolDatingSite.com and hit it off right away with their shared love of hiking and outdoor adventures. After many shared trips and experiences, they decided to tie the knot in 2023. ",
+      "<i class='fa-solid fa-face-laugh emoji'></i> Alice and Bob met on CoolDatingSite.com and hit it off right away with their shared love of hiking and outdoor adventures. After many shared trips and experiences, they decided to tie the knot in 2023. ",
   },
   {
     detail:
-      "Charlie and Dana connected over their passion for music and art. Their first date was a virtual concert during the lockdown. They've been inseparable ever since and now live together, exploring new art scenes around the world.",
+      "<i class='fa-solid fa-face-smile emoji'></i> Charlie and Dana connected over their passion for music and art. Their first date was a virtual concert during the lockdown. They've been inseparable ever since and now live together, exploring new art scenes around the world.",
   },
   {
     detail:
-      "Eve and Frank both swiped right because of their mutual interest in cooking. After their first meeting at a cooking class, they continued to explore cuisines from different cultures. They recently opened a small cafe together. ",
+      "<i class='fa-solid fa-face-smile-beam emoji'></i> Eve and Frank both swiped right because of their mutual interest in cooking. After their first meeting at a cooking class, they continued to explore cuisines from different cultures. They recently opened a small cafe together. ",
   },
 ]
 let match_html = ``
