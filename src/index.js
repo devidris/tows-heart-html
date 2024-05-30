@@ -24,19 +24,40 @@ menu_item.forEach(list => {
 })
 //Header having a box-shadow on scroll
 
-const header = document.querySelector(`.header-container`)
 const header_container = document.querySelector(`.header-container_div`)
+let last_scroll
+let timer
+
+function show_header() {
+  header_container.style.opacity = 1
+  header_container.style.transition = "0.7s"
+}
+function hide_header() {
+  header_container.style.opacity = 0
+  header_container.style.transition = "0.7s"
+}
 
 window.addEventListener(`scroll`, () => {
   let scroll_top = window.scrollY
-  console.log(window.scrollY)
+  console.log(last_scroll)
+
   if (window.scrollY > 0) {
     header_container.classList.add(`scroll`)
-
-    console.log(`good`)
   } else {
     header_container.classList.remove(`scroll`)
-    header_container.classList.remove(`active`)
+    show_header()
+  }
+  if (last_scroll !== scroll_top) {
+    show_header()
+  }
+  //senior dev idris the problem is that when i set last_scroll = scroll_top, when the scroll event activates again the scroll_top value changes which is not meant to be so and the worst part is im not scrolling
+  last_scroll = scroll_top
+
+  window.clearTimeout(timer)
+  if (last_scroll === scroll_top && window.scrollY > 0) {
+    timer = setTimeout(() => {
+      hide_header()
+    }, 1000)
   }
 })
 
